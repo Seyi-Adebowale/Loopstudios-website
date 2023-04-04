@@ -1,0 +1,322 @@
+*{
+    font-family: 'Alata', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(images/desktop/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.navbar{
+    width: 100%;
+    padding: 6%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto; 
+}
+.navbar-logo{
+    z-index: 99;
+}
+.nav-icons{
+    display: none;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style-type: none;
+    text-align: right;
+    padding-top: 10px;
+}
+nav ul li{
+    position: relative;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover, .footer1 ul li a:hover{
+    border-bottom: 2px solid white;
+    padding: 0 0 10px;
+}
+.text-box{
+    border: 2px solid white;
+    background: transparent;
+    width: 45%;
+    margin: 6%;
+}
+.text-box p{
+    color: white;
+    font-size: 4rem;
+    padding: 30px;
+    line-height: 70px;
+}
+.leader-box{
+    position:relative;
+    margin: 8% 6%;
+}
+.leader-box img{
+    display: block;
+}
+.leader-text-box{
+    position: absolute;
+    top: 180px;
+    left: 45%;
+    padding: 85px;
+    width: 648px;
+    background-color: white;
+}
+.leader-text-box h3{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.leader-text-box p{
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    color: hsl(0, 0%, 55%);
+    line-height: 1.7;
+}
+.our-creations{
+    position: relative;
+    margin: 6%;
+}
+.our-creations h2{
+    margin-bottom: 50px;
+    font-size: 2.8rem;
+}
+.creations-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    place-content: center;
+    grid-gap: 30px;
+}
+.creations-card{
+    position: relative;
+    height: 450px;
+    cursor: pointer;
+}
+.creations-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.creations-card::after{
+    content:'';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+}
+.creations-card:hover::after{
+    background: linear-gradient(#fffa, #555a);
+}
+.creations-card h3{
+    position: absolute;
+    bottom: 35px;
+    left: 40px;
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+}
+.creations-card:hover h3{
+    color: black;
+}
+.creations-link{
+    justify-self: end;
+}
+.hero-btn{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: Alata;
+    color: black;
+    border: 2px solid black;
+    padding: 12px 20px;
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: 4px;
+}
+.hero-btn:hover{
+    background-color: black;
+    color: white;
+}
+.footer{
+    background-color: black;
+    height: 25vh;
+    
+}
+.footer-container{
+    display: grid;
+    margin: 6%;
+    padding: 2% 0;
+    grid-template-columns: repeat(2, minmax(350px, 350px));
+    justify-content: space-between;
+    align-items: center;    
+    
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    justify-self: end;
+    column-gap: 10px;
+}
+.footer1{
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 25px;
+}
+.footer2{
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 25px;
+    text-align: right;
+}
+.footer1 ul{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(70px, 1fr));
+    list-style-type: none;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.footer p{
+    color: hsl(0, 0%, 55%);
+    /* justify-self: end; */
+    font-weight: bold;
+}
+nav .fas{
+    display: none;
+}
+@media(max-width:1060px){
+     .text-box {
+        border: 2px solid white;
+        background: transparent;
+        width: 65%;
+        margin: 6%;
+    }
+    .text-box p{
+        color: white;
+        font-size: 3.4rem;
+        padding: 30px;
+        line-height: 70px;
+    }   
+    .leader-img{
+        margin-bottom: 80px;
+    }
+    .leader-img img{
+        width: 100%;
+    }
+    .leader-box, .leader-text-box{
+        position: static;
+        max-width: 100%;
+        text-align: center;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    
+}
+@media (max-width:750px){
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        height: 50vh;
+        width: 100%;
+        background: black;
+    }
+    .icons{
+        justify-self: center;
+    }
+    .footer1 ul{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .footer1 img{
+        justify-self: center;
+    }
+    .footer1 ul li{
+        padding: 8px;
+    }
+    .footer2{
+        padding-top: 2%;
+        text-align: center;
+    }
+} 
+@media(max-width:700px){
+    .text-box {
+        border: 2px solid white;
+        background: transparent;
+        width: 60%;
+        margin: 6% auto;
+    }
+    .text-box p{
+        color: white;
+        font-size: 3.2rem;
+        padding: 30px;
+        line-height: 70px;
+    }
+    .hero-btn{
+        position: static;
+        display: block;
+        width: max-content;
+        margin: 40px auto auto auto;
+    }
+    
+    .creations-card{
+        height: 250px;
+    }
+    .nav-menu ul{
+        grid-template-columns: 1fr;
+        text-align: left;
+        padding: 20px;
+        margin-top: 150px;
+    }
+    .nav-menu ul li{
+        padding: 20px;
+        text-transform: uppercase;
+    }
+    .nav-menu{
+        position: absolute;
+        background: black;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        right: -800px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.7s;
+    }
+    .navbar .fas{
+        display: block;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 35px;
+        font-size: 22px;
+    }
+}
+@media(max-width:648px){
+    .text-box p{
+        font-size: 2.6rem;
+    }
+}
+@media(max-width:540px){
+    .text-box p{
+        font-size: 2rem;
+    }
+
+ 
+}
