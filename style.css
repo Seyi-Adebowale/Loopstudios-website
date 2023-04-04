@@ -267,7 +267,7 @@ nav .fas{
     }
     .text-box p{
         color: white;
-        font-size: 3.2rem;
+        font-size: 3rem;
         padding: 30px;
         line-height: 70px;
     }
@@ -301,7 +301,6 @@ nav .fas{
         text-align: left;
         z-index: 2;
         transition: 0.7s;
-        position: fixed;
     }
     .navbar .fas{
         display: block;
